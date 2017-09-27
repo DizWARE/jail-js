@@ -58,7 +58,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	function __export(m) {
 	    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 	}
-	Object.defineProperty(exports, "__esModule", { value: true });
 	__export(__webpack_require__(1));
 	__export(__webpack_require__(2));
 	__export(__webpack_require__(4));
@@ -71,7 +70,6 @@ return /******/ (function(modules) { // webpackBootstrap
 /***/ (function(module, exports) {
 
 	"use strict";
-	Object.defineProperty(exports, "__esModule", { value: true });
 	/**
 	 * Validates that the given element was decorated with the Component decorator.
 	 *
@@ -132,7 +130,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	function __export(m) {
 	    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 	}
-	Object.defineProperty(exports, "__esModule", { value: true });
 	__export(__webpack_require__(3));
 
 	//# sourceMappingURL=index.js.map
@@ -143,7 +140,6 @@ return /******/ (function(modules) { // webpackBootstrap
 /***/ (function(module, exports) {
 
 	"use strict";
-	Object.defineProperty(exports, "__esModule", { value: true });
 	var QuerySelectorLocation;
 	(function (QuerySelectorLocation) {
 	    QuerySelectorLocation[QuerySelectorLocation["attachedOnly"] = 1] = "attachedOnly";
@@ -162,7 +158,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	function __export(m) {
 	    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 	}
-	Object.defineProperty(exports, "__esModule", { value: true });
 	__export(__webpack_require__(5));
 	__export(__webpack_require__(9));
 	__export(__webpack_require__(10));
@@ -177,7 +172,6 @@ return /******/ (function(modules) { // webpackBootstrap
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
-	Object.defineProperty(exports, "__esModule", { value: true });
 	__webpack_require__(6);
 	const helpers_1 = __webpack_require__(7);
 	/**
@@ -1419,7 +1413,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	function __export(m) {
 	    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 	}
-	Object.defineProperty(exports, "__esModule", { value: true });
 	__export(__webpack_require__(8));
 
 	//# sourceMappingURL=index.js.map
@@ -1430,7 +1423,6 @@ return /******/ (function(modules) { // webpackBootstrap
 /***/ (function(module, exports) {
 
 	"use strict";
-	Object.defineProperty(exports, "__esModule", { value: true });
 	/**
 	 * Converts a class property name to a DOM attribute name.
 	 *
@@ -1468,7 +1460,6 @@ return /******/ (function(modules) { // webpackBootstrap
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
-	Object.defineProperty(exports, "__esModule", { value: true });
 	__webpack_require__(6);
 	/**
 	 * Saves the attributes and their initial state in the CustomComponent metadata.
@@ -1492,7 +1483,6 @@ return /******/ (function(modules) { // webpackBootstrap
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
-	Object.defineProperty(exports, "__esModule", { value: true });
 	__webpack_require__(6);
 	const custom_component_1 = __webpack_require__(11);
 	const helpers_1 = __webpack_require__(7);
@@ -1560,8 +1550,8 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 11 */
 /***/ (function(module, exports, __webpack_require__) {
 
-	"use strict";
 	/// <reference path="../global.d.ts" />
+	"use strict";
 	var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
 	    return new (P || (P = Promise))(function (resolve, reject) {
 	        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
@@ -1570,7 +1560,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	        step((generator = generator.apply(thisArg, _arguments || [])).next());
 	    });
 	};
-	Object.defineProperty(exports, "__esModule", { value: true });
 	const helpers_1 = __webpack_require__(7);
 	const custom_component_1 = __webpack_require__(1);
 	const component_listeners_1 = __webpack_require__(12);
@@ -1884,7 +1873,6 @@ return /******/ (function(modules) { // webpackBootstrap
 /***/ (function(module, exports) {
 
 	"use strict";
-	Object.defineProperty(exports, "__esModule", { value: true });
 	/**
 	 * Checks if the component implements the onAdopted interface.
 	 *
@@ -1956,7 +1944,6 @@ return /******/ (function(modules) { // webpackBootstrap
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
-	Object.defineProperty(exports, "__esModule", { value: true });
 	__webpack_require__(6);
 	const helpers_1 = __webpack_require__(7);
 	function AttributeChangedListener(attributeNames) {
@@ -1980,7 +1967,6 @@ return /******/ (function(modules) { // webpackBootstrap
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
-	Object.defineProperty(exports, "__esModule", { value: true });
 	const enumerations_1 = __webpack_require__(2);
 	/**
 	 * Converts the decorated property into a getter, that retrieves the child element matching the selector from the DOM.

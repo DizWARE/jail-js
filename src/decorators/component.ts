@@ -15,7 +15,7 @@ let loadedComponentCount = 0;
  * @param {ComponentConfig} config - The configuration for this compnent.
  * @returns {ClassDecorator}
  */
-export function Component<T extends HTMLElement>(config: IComponentConfig) {
+export function Component<T extends HTMLElement>(config: IComponentConfig): ClassDecorator {
     return (element: IElementConstructor<T>): ICustomComponentClass<T> | IElementConstructor<T> => {
         if (!fs.existsSync(config.templateUrl)) {
             return element;
