@@ -1,0 +1,5 @@
+{
+    "name": "web-component-library_interfaces",
+    "version": "0.0.1",
+    "types": "../src/interfaces/index.d.ts"
+}

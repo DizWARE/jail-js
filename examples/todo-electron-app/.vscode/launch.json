@@ -1,0 +1,35 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug Electron Renderer Process",
+            "type": "chrome",
+            "request": "launch",
+            "runtimeExecutable": "${workspaceRoot}\\node_modules\\electron\\dist\\electron.exe",
+            "runtimeArgs": [
+                "${workspaceRoot}",
+                "--remote-debugging-port=9273"
+            ],
+            "sourceMaps": true,
+            "webRoot": "${workspaceRoot}",
+            "userDataDir": "${workspaceRoot}",
+            "preLaunchTask": "build",
+            "port": 9273
+        },
+        {
+            "name": "Debug Electron Main Process",
+            "type": "node",
+            "request": "launch",
+            "runtimeExecutable": "${workspaceRoot}\\node_modules\\electron\\dist\\electron.exe",
+            "program": "${workspaceRoot}\\app\\main.js",
+            "runtimeArgs": [
+                "${workspaceRoot}",
+                "--remote-debugging-port=9273"
+            ],
+            "cwd": "${workspaceRoot}",
+            "console": "internalConsole",
+            "sourceMaps": true,
+            "preLaunchTask": "build"
+        }
+    ]
+}

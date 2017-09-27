@@ -1,0 +1,16 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Attach to test process",
+            "type": "chrome",
+            "request": "attach",
+            "sourceMaps": true,
+            "webRoot": "${workspaceRoot}",
+            "pathMapping": {
+                "${workspaceRoot}/../electron-typescript-boilerplate/node_modules/web-component-framework": "${workspaceRoot}"
+            },
+            "port": 9273
+        }
+    ]
+}

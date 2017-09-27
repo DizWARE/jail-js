@@ -1,0 +1,6 @@
+{
+    "name": "web-component-library_decorators",
+    "version": "0.0.1",
+    "main": "../dist/index.js",
+    "types": "../src/decorators/index.d.ts"
+}

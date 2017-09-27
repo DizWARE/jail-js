@@ -1,0 +1,26 @@
+{
+  "name": "jail-js",
+  "version": "0.2.1",
+  "description": "A very basic library for easing the work required to use HTML imports, template tag, and custom components.",
+  "main": "dist/index.js",
+  "types": "src/index.d.ts",
+  "dependencies": {
+    "reflect-metadata": "^0.1.9"
+  },
+  "devDependencies": {
+    "@types/node": "^7.0.0",
+    "del": "^2.2.2",
+    "gulp": "^3.9.1",
+    "gulp-sourcemaps": "^2.4.0",
+    "gulp-typescript": "^3.1.4",
+    "gulp-webpack": "^1.5.0",
+    "typescript": "^2.1.5"
+  },
+  "scripts": {
+    "build:gulpfile": "tsc gulpfile",
+    "build:gulp": "gulp",
+    "build:gulp:rebuild": "npm install && gulp"
+  },
+  "author": "Tyler Robinson",
+  "license": "MIT"
+}

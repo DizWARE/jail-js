@@ -1,0 +1,15 @@
+{
+    "$schema": "http://json.schemastore.org/tsconfig",
+    "compilerOptions": {
+        "target": "es2015",
+        "module": "commonjs",
+        "moduleResolution": "node",
+        "declaration": true,
+        "stripInternal": true,
+        "experimentalDecorators": true
+    },
+    "include": [
+        "src/**/*.ts",
+        "global.d.ts"
+    ]
+}

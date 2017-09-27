@@ -1,0 +1,37 @@
+{
+    "version": "0.1.0",
+    "command": "cmd",
+    "args": [
+        "/C"
+    ],
+    "isShellCommand": true,
+    "showOutput": "always",
+    "suppressTaskName": true,
+    "tasks": [
+        {
+            "taskName": "build gulpfile",
+            "args": [
+                "npm",
+                "run",
+                "build:gulpfile"
+            ]
+        },
+        {
+            "taskName": "build",
+            "args": [
+                "npm",
+                "run",
+                "build:gulp"
+            ],
+            "problemMatcher": "$gulp-tsc"
+        },
+        {
+            "taskName": "rebuild",
+            "args": [
+                "npm",
+                "run",
+                "build:gulp:rebuild"
+            ]
+        }
+    ]
+}
