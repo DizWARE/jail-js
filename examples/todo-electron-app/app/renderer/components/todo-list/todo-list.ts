@@ -1,4 +1,4 @@
-import { Component, Attribute, Attributes, AttributeChangedListener, QuerySelectorAll, PreviousSibling } from "web-component-library/decorators";
+import { Component, Attribute, Attributes, AttributeChangedListener, QuerySelectorAll, PreviousSibling } from "jail-js/decorators";
 import { TodoItem } from "./todo-item";
 import { TodoControlPanel } from "../todo-control-panel";
 

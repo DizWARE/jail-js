@@ -24,7 +24,7 @@ First, take a look at the example application in the examples folder. It is a TO
 To start building your own application using the library start by NPM installing:
 
 ```CMD
-npm install --save git+https://dizware.visualstudio.com/_git/web-component-library
+npm install --save git+https://dizware.visualstudio.com/_git/jail-js
 ```
 
 Structure your app however you like. Personally, I like a structure similar to this:
@@ -93,16 +93,16 @@ The library has two ways it can be consumed.
 The first gives access to everything available in the library:
 
 ```Typescript
-import { [pieces to import] } from "web-component-library";
+import { [pieces to import] } from "jail-js";
 ```
 
 The second allows the imports to be broken up into smaller consumables:
 
 ```Typescript
-import { [decorators to import] } from "web-component-library/decorators";
-import { [interfaces to import] } from "web-component-library/interfaces";
-import { [typeguards to import] } from "web-component-library/typeguards";
-import { [enumerations to import] } from "web-component-library/enumerations";
+import { [decorators to import] } from "jail-js/decorators";
+import { [interfaces to import] } from "jail-js/interfaces";
+import { [typeguards to import] } from "jail-js/typeguards";
+import { [enumerations to import] } from "jail-js/enumerations";
 ```
 
 The second method is the recommended method, because it is cleaner when you have more complicated Components. [See Pieces for details on what is available for import](../README.md#the-pieces)
@@ -112,7 +112,7 @@ The second method is the recommended method, because it is cleaner when you have
 All components need to use the Component class decorator. Every Component requires a tag name that is kabab case and includes one hyphen(i.e. my-element), and a template URL; the other options are optional. The class also must extend HTMLElement for regular Custom Components. For Custom Components that extend native HTML Elements like `<div>` or `<input>`, [see below](#extending-built-in-elements).
 
 ```Typescript
-import { Component } from "web-component-library/decorators";
+import { Component } from "jail-js/decorators";
 
 @Component({
     tagName: "my-element",
@@ -131,8 +131,8 @@ If your component had no extra functionality, you'd be done. This type of compon
 In the Custom Component v1 spec, 4 functions are listed as being used to react to changes and interactions with the DOM - `connectedCallback()`, `disconnectedCallback()`, `attributeChangedCallback()`, `adoptedCallback()`. By using the `@Component` decorator, these functions are already added to your class, and used to perform functionality from the library, like attaching the DOM children or calling callbacks for attributes that change. You cannot override these functions because they will be ignored. Instead, you will be able to bring in your needed functionality by implementing the provided interfaces - `IOnConnected`, `IOnDisconnected`, `IOnAttributeChanged`, and `IOnAdopted`. This gives you the option to only bring in what you need for your component, while also allowing you to react to these DOM changes as needed.
 
 ```Typescript
-import { Component } from "web-component-library/decorators";
-import { IOnConnected, IOnDisconnected, IOnAttributeChanged, IOnAdopted } from "web-component-library/interfaces"
+import { Component } from "jail-js/decorators";
+import { IOnConnected, IOnDisconnected, IOnAttributeChanged, IOnAdopted } from "jail-js/interfaces"
 
 @Component({
     tagName: "my-element",
@@ -194,8 +194,8 @@ Which is obviously not what we want. To change how a component deals with DOM Ch
 * **my-element.ts**
 
 ```Typescript
-import { Component } from "web-component-library/decorators";
-import { IAttachChildren } from "web-component-library/interfaces"
+import { Component } from "jail-js/decorators";
+import { IAttachChildren } from "jail-js/interfaces"
 
 @Component({
     tagName: "my-element",
@@ -238,7 +238,7 @@ static get observedAttributes() {
 Under the hood, the library will create this function for you. To observe changes to specific attributes for your component, use the `@Attributes` decorator.
 
 ```Typescript
-import { Component, Attributes } from "web-component-library/decorators";
+import { Component, Attributes } from "jail-js/decorators";
 
 @Component({
     tagName: "my-element",
@@ -274,7 +274,7 @@ You'll notice that "second-attribute" is given a value of 0. When the component 
 Of course, if you are watching for changes on these attributes, you will need a way to react to those changes. There are two options that can be used. The first is to implement the `IOnAttributeChanged`.
 
 ```Typescript
-import { Component, Attributes } from "web-component-library/decorators";
+import { Component, Attributes } from "jail-js/decorators";
 import { IOnAttributeChanged } from "web-components-library/interfaces";
 
 @Component({
@@ -304,7 +304,7 @@ export class MyElement extends HTMLElement implements IOnAttributeChanged {
 The second option is to use the `@AttributeChangedListener` decorator:
 
 ```Typescript
-import { Component, Attributes, AttributeChangedListener } from "web-component-library/decorators";
+import { Component, Attributes, AttributeChangedListener } from "jail-js/decorators";
 
 @Component({
     tagName: "my-element",
@@ -370,7 +370,7 @@ To alleviate this work a bit, the library provides some property decorators that
 For attributes, use the `@Attribute` decorator:
 
 ```Typescript
-import { Component, Attribute } from "web-component-library/decorators";
+import { Component, Attribute } from "jail-js/decorators";
 
 @Component({
     tagName: "my-element",
@@ -412,7 +412,7 @@ For getting a single child element:
 * **my-element.ts**
 
 ```Typescript
-import { Component, QuerySelector } from "web-component-library/decorators";
+import { Component, QuerySelector } from "jail-js/decorators";
 
 @Component({
     tagName: "my-element",
@@ -450,7 +450,7 @@ Or to get multiple children:
 * **my-element.ts**
 
 ```Typescript
-import { Component, QuerySelectorAll } from "web-component-library/decorators";
+import { Component, QuerySelectorAll } from "jail-js/decorators";
 
 @Component({
     tagName: "my-element",
@@ -501,9 +501,9 @@ The default functionality is to look on the Shadow DOM for the selector, but thi
 * **my-element.ts**
 
 ```Typescript
-import { Component, QuerySelectorAll } from "web-component-library/decorators";
-import { QuerySelectorLocation } from "web-component-library/enumerations";
-import { IAttachChildren } from "web-component-library/interfaces";
+import { Component, QuerySelectorAll } from "jail-js/decorators";
+import { QuerySelectorLocation } from "jail-js/enumerations";
+import { IAttachChildren } from "jail-js/interfaces";
 
 @Component({
     tagName: "my-element",
@@ -575,7 +575,7 @@ Finally, some additional attributes are given to help interact with other pieces
 * **parent-element.ts**
 
 ```Typescript
-import { Component, Attribute } from "web-component-library/decorators";
+import { Component, Attribute } from "jail-js/decorators";
 
 @Component({
     tagName: "parent-element",
@@ -595,7 +595,7 @@ export class MyElement extends HTMLElement {
 * **my-element.ts**
 
 ```Typescript
-import { Component, Attribute, ParentComponent, NextSibling, PreviousSibling } from "web-component-library/decorators";
+import { Component, Attribute, ParentComponent, NextSibling, PreviousSibling } from "jail-js/decorators";
 import { ParentElement } from "./parent-element";
 
 @Component({
@@ -661,7 +661,7 @@ You'll need to do this:
 On top of this, you'll need some additional things in your JavaScript:
 
 ```Typescript
-import { Component } from "web-component-library/decorators";
+import { Component } from "jail-js/decorators";
 
 @Component({
     tagName: "my-element",

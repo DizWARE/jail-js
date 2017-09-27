@@ -1,5 +1,5 @@
-import { Component, QuerySelector, NextSibling } from "web-component-library/decorators";
-import { IOnConnected } from "web-component-library/interfaces";
+import { Component, QuerySelector, NextSibling } from "jail-js/decorators";
+import { IOnConnected } from "jail-js/interfaces";
 import { TodoList } from "../todo-list";
 
 /**

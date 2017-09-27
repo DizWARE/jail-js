@@ -1,6 +1,6 @@
 import { If } from "../if-block";
 import { Else } from "../else-block";
-import { extendsCustomComponent, implementsCustomComponentClass } from "web-component-library/typeguards";
+import { extendsCustomComponent, implementsCustomComponentClass } from "jail-js/typeguards";
 
 /**
  * Provides validation for whether the element is an If Block.

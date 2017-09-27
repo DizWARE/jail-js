@@ -1,4 +1,4 @@
-import { Component, Attribute, Attributes, AttributeChangedListener } from "web-component-library/decorators";
+import { Component, Attribute, Attributes, AttributeChangedListener } from "jail-js/decorators";
 import { isElseBlock } from "./typeguards";
 
 /**

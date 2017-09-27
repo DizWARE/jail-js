@@ -1,5 +1,5 @@
 {
-    "name": "web-component-library_enumerations",
+    "name": "jail-js_enumerations",
     "version": "0.0.1",
     "main": "../dist/index.js",
     "types": "../src/enumerations/index.d.ts"

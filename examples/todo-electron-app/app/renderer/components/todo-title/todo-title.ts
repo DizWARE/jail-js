@@ -1,4 +1,4 @@
-import { Component } from "web-component-library/decorators";
+import { Component } from "jail-js/decorators";
 
 @Component({
     tagName: "todo-title",

@@ -5,7 +5,7 @@
   "main": "app/main.js",
   "dependencies": {
     "electron-is": "^2.4.0",
-    "web-component-library": "git+https://dizware.visualstudio.com/_git/web-component-library"
+    "jail-js": "git+https://dizware.visualstudio.com/_git/jail-js"
   },
   "devDependencies": {
     "@types/electron": "1.4.31",
@@ -24,7 +24,7 @@
     "build:gulpfile": "tsc gulpfile",
     "build:rebuild": "npm install && tsc -p .",
     "build:gulp": "gulp build",
-    "build:gulp:rebuild": "npm uninstall web-component-library && npm install && gulp build",
+    "build:gulp:rebuild": "npm uninstall jail-js && npm install && gulp build",
     "start": "electron ."
   },
   "author": "DizWARE (Tyler Robinson)",

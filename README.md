@@ -178,7 +178,7 @@ p {
 * **basic-element.ts**
 
 ```Typescript
-import { Component, Attributes, Attribute, AttributeChangedListener } from "web-component-library/decorators";
+import { Component, Attributes, Attribute, AttributeChangedListener } from "jail-js/decorators";
 
 @Component({
     tagName: "basic-element",
@@ -232,7 +232,7 @@ A more detailed guide can be found [here](./tutorial/index.md)
 To start building your own application using the library start by NPM installing:
 
 ```CMD
-npm install --save git+https://dizware.visualstudio.com/_git/web-component-library
+npm install --save git+https://github.com/DizWARE/jail-js.git
 ```
 
 No other steps need to be made to start using the library.
@@ -242,10 +242,10 @@ No other steps need to be made to start using the library.
 To consume the library in your JavaScript/Typescript:
 
 ```Typescript
-import { [decorators to import] } from "web-component-library/decorators";
-import { [interfaces to import] } from "web-component-library/interfaces";
-import { [typeguards to import] } from "web-component-library/typeguards";
-import { [enumerations to import] } from "web-component-library/enumerations";
+import { [decorators to import] } from "jail-js/decorators";
+import { [interfaces to import] } from "jail-js/interfaces";
+import { [typeguards to import] } from "jail-js/typeguards";
+import { [enumerations to import] } from "jail-js/enumerations";
 ```
 
 ### Build Components
@@ -290,8 +290,8 @@ First import the pieces you need from the library, write your code, and prosper.
 * **my-element.ts**
 
 ```Typescript
-import { Component, Attribute, QuerySelector, Attributes, AttributeChangedListener } from "web-component-library/decorators";
-import { IOnConnected } from "web-component-library/interfaces";
+import { Component, Attribute, QuerySelector, Attributes, AttributeChangedListener } from "jail-js/decorators";
+import { IOnConnected } from "jail-js/interfaces";
 
 @Component({
     tagName: "my-element",

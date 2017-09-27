@@ -1,6 +1,6 @@
-import { Enumerations } from "web-component-library";
-import { IOnConnected } from "web-component-library/interfaces";
-import { Component, Attributes, Attribute, AttributeChangedListener, QuerySelector, ParentComponent } from "web-component-library/decorators";
+import { Enumerations } from "jail-js";
+import { IOnConnected } from "jail-js/interfaces";
+import { Component, Attributes, Attribute, AttributeChangedListener, QuerySelector, ParentComponent } from "jail-js/decorators";
 import { TodoList } from "../todo-list";
 
 /**

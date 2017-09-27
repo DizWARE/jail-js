@@ -1,7 +1,7 @@
-import { Component, Attribute, Attributes, AttributeChangedListener } from "web-component-library/decorators";
+import { Component, Attribute, Attributes, AttributeChangedListener } from "jail-js/decorators";
 import { If } from "../if-block";
 import { isIfBlock, isElseBlock } from "../typeguards"
-import { IAttachChildren } from "web-component-library/interfaces";
+import { IAttachChildren } from "jail-js/interfaces";
 
 /**
  * Represents an Else block in the HTML Document. It is activated within an If block. If the if fails, it run through any else blocks that are within the if statement.
