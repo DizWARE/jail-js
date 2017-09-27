@@ -5,7 +5,7 @@
   "main": "app/main.js",
   "dependencies": {
     "electron-is": "^2.4.0",
-    "jail-js": "git+https://dizware.visualstudio.com/_git/jail-js"
+    "jail-js": "git+https://github.com/DizWARE/jail-js"
   },
   "devDependencies": {
     "@types/electron": "1.4.31",

@@ -21,6 +21,6 @@
         "build:gulp": "gulp",
         "build:gulp:rebuild": "npm install && gulp"
     },
-    "author": "Navitaire",
-    "license": "UNLICENCED"
+    "author": "Tyler Robinson",
+    "license": "MIT"
 }

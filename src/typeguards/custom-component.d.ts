@@ -1,11 +1,12 @@
 import { ICustomComponent, ICustomComponentClass } from "../interfaces/custom-component";
 import { IElementConstructor } from "../interfaces/element-constructor";
 /**
- * Checks if the component implements the onAdopted interface.
+ * Validates that the given element was decorated with the Component decorator.
  *
  * @export
- * @param {(CustomComponent | OnAdopted)} arg
- * @returns {arg is OnAdopted}
+ * @template T
+ * @param {(T | ICustomComponent)} arg
+ * @returns {(arg is (T & ICustomComponent))}
  */
 export declare function extendsCustomComponent<T extends HTMLElement>(arg: T | ICustomComponent): arg is (T & ICustomComponent);
 /**
