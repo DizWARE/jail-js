@@ -1,4 +1,4 @@
-# JAIL.js - Just-Another-Interesting-Library - Official Name TBD
+# JAIL.js - Just-Another-Interesting-Library
 
 ## Table of Contents
 
@@ -29,6 +29,8 @@
 This library provides developers an abstraction from the work required to create and use native web components. It is built with Typescript, and targets the V1 spec of Web Components and Shadow DOM. It also utilizes features from HTML Imports and the Template tag, providing a full native suite of features.
 
 Instead of trying to explain too much of why, I'll provide some examples of using the web components without the library vs using this library. This is a very limited view. You have to think of using these in more realistic projects with tens to hundreds of different components.
+
+Please Note - This was written back when TS Mixins were expressed using decorators. Since TS has added actual mixins, the library needs to be updated to fit these changes. I've currently locked the version of TS to a version that the library was built on for now, so it will build and run.
 
 ### Example
 
