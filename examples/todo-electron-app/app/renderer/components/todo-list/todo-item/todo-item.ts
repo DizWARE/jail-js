@@ -1,4 +1,4 @@
-import { Enumerations } from "jail-js";
+import { QuerySelectorLocation } from "jail-js/enumerations";
 import { IOnConnected } from "jail-js/interfaces";
 import { Component, Attributes, Attribute, AttributeChangedListener, QuerySelector, ParentComponent } from "jail-js/decorators";
 import { TodoList } from "../todo-list";
@@ -27,7 +27,7 @@ export class TodoItem extends HTMLElement implements IOnConnected {
      * @type {HTMLLabelElement}
      * @memberOf TodoItem
      */
-    @QuerySelector("#todoValue", Enumerations.QuerySelectorLocation.both) private _todoValue: HTMLLabelElement;
+    @QuerySelector("#todoValue", QuerySelectorLocation.both) private _todoValue: HTMLLabelElement;
 
     /**
      * A button for removing the todo item.

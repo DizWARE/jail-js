@@ -8,6 +8,7 @@
     "jail-js": "git+https://github.com/DizWARE/jail-js"
   },
   "devDependencies": {
+    "@types/electron": "1.4.38",
     "@types/node": "7.0.0",
     "electron": "1.5.x",
     "gulp": "3.9.x",
