@@ -45,12 +45,12 @@ gulp.task("build:typescript", ["clean"], function () {
 gulp.task("build:typings", ["build:typescript"], function () {
     const tsProject = ts.createProject("dtsconfig.json", {
         typescript: require("typescript"),
-        rootDir: "./src"
+        rootDir: "./typings"
     });
 
     return tsProject.src()
         .pipe(tsProject(ts.reporter.defaultReporter())).dts
-        .pipe(gulp.dest("./src"));
+        .pipe(gulp.dest("./typings"));
 })
 
 gulp.task("clean", function () {

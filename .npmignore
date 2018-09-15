@@ -1,0 +1,5 @@
+.vscode/
+examples/
+src/
+*tsconfig.json
+gulpfile*.ts

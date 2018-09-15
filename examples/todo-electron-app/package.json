@@ -5,9 +5,10 @@
   "main": "app/main.js",
   "dependencies": {
     "electron-is": "2.4.x",
-    "jail-js": "git+https://github.com/DizWARE/jail-js"
+    "jail-js": "../.."
   },
   "devDependencies": {
+    "@types/node": "7.0.0",
     "electron": "2.0.x",
     "gulp": "3.9.x",
     "gulp-sass": "3.1.x",

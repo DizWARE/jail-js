@@ -2,5 +2,5 @@
     "name": "jail-js_typeguards",
     "version": "0.0.1",
     "main": "../dist/index.js",
-    "types": "../src/typeguards/index.d.ts"
+    "types": "../typings/typeguards/index.d.ts"
 }

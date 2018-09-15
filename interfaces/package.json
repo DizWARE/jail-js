@@ -1,5 +1,5 @@
 {
     "name": "jail-js_interfaces",
     "version": "0.0.1",
-    "types": "../src/interfaces/index.d.ts"
+    "types": "../typings/interfaces/index.d.ts"
 }
