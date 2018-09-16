@@ -15,3 +15,4 @@ export declare function AttributeChangedListener<T extends HTMLElement>(attribut
  * @param {string[]} attributeNames - The name of the attributes to watch for changes. When a change happens, this method is called.
  */
 export declare function AttributeChangedListener<T extends HTMLElement>(...attributeNames: string[]): MethodDecorator;
+//# sourceMappingURL=attribute-changed-listener.d.ts.map

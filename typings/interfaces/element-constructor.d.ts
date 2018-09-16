@@ -7,3 +7,4 @@
 export interface IElementConstructor<T extends HTMLElement> {
     new (...args: any[]): T;
 }
+//# sourceMappingURL=element-constructor.d.ts.map

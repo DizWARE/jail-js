@@ -1,0 +1,17 @@
+@import "styles/shared.scss";
+
+div {
+    h1, h2 {
+        font-size: 3em;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    h1 {
+        font-weight: bold;
+    }
+
+    h2 {
+        font-weight: 400;
+    }
+}

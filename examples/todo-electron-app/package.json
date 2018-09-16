@@ -8,22 +8,18 @@
     "jail-js": "../.."
   },
   "devDependencies": {
-    "@types/node": "7.0.0",
     "electron": "2.0.x",
     "gulp": "3.9.x",
     "gulp-sass": "3.1.x",
-    "gulp-sourcemaps": "2.4.x",
-    "gulp-typescript": "3.1.x",
-    "node-sass": "4.9.x",
-    "typescript": "2.1.x"
+    "gulp-sourcemaps": "2.6.x",    
+    "gulp-typescript": "5.0.0-alpha.3",
+    "node-sass": "4.9.x",    
+    "typescript": "3.0.x"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build:ts": "tsc -p .",
+    "build": "npm run build:gulpfile && npm run build:gulp",
     "build:gulpfile": "tsc gulpfile",
-    "build:rebuild": "npm install && tsc -p .",
     "build:gulp": "gulp build",
-    "build:gulp:rebuild": "npm uninstall jail-js && npm install && gulp build",
     "start": "electron ."
   },
   "author": "DizWARE (Tyler Robinson)",

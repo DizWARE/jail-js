@@ -50,6 +50,13 @@ interface ShadowRoot extends DocumentFragment {
 interface DocumentFragment extends Node {
 }
 
+interface Node {
+    /**
+     * Gets the parent component of this element. This will go through any layers of HTML and shadow DOM to the next web component.
+     */
+    getRootNode(): ShadowRoot;
+}
+
 interface Document {
     createElement(tagName: string, options: { is: string });
 }

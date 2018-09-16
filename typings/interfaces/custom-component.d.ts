@@ -37,3 +37,4 @@ export interface ICustomComponentClass<T extends HTMLElement> {
  */
 export interface ICustomComponent extends HTMLElement {
 }
+//# sourceMappingURL=custom-component.d.ts.map

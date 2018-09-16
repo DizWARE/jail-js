@@ -17,6 +17,8 @@ const webComponentsReady = new Promise<void>((resolve, reject) => {
         resolve();
     });
 });
+type ComponentConstructor = new (...args: any[]) => HTMLElement;
+
 
 /**
  * Mixin for injecting custom component functionality into a class that inherits from HTMLElement.
@@ -27,7 +29,7 @@ const webComponentsReady = new Promise<void>((resolve, reject) => {
  * @returns {ICustomComponentClass<T>}
  * @internal
  */
-export function CustomComponentMixin<T extends HTMLElement>(element: new (...args: any[]) => HTMLElement): ICustomComponentClass<T> {
+export function CustomComponentMixin<T extends HTMLElement>(element: ComponentConstructor): ICustomComponentClass<T> {
     return class CustomComponent extends element implements ICustomComponent {
 
         /**
@@ -354,5 +356,5 @@ export function CustomComponentMixin<T extends HTMLElement>(element: new (...arg
 
             this.shadowRoot.appendChild(instance);
         }
-    }
+    } as ICustomComponentClass<T>;
 }

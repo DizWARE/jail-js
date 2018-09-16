@@ -14,3 +14,4 @@ export interface IAttributeInfo {
      */
     value?: any;
 }
+//# sourceMappingURL=attribute-info.d.ts.map

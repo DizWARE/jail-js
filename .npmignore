@@ -1,5 +1,8 @@
 .vscode/
 examples/
+tutorial/
 src/
 *tsconfig.json
-gulpfile*.ts
+gulpfile.*
+.npmignore
+components/

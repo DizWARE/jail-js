@@ -44,3 +44,4 @@ export interface IAttachChildren {
     attachChildren(): void;
     detachChildren(): void;
 }
+//# sourceMappingURL=component-listeners.d.ts.map

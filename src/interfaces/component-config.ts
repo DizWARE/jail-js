@@ -1,3 +1,5 @@
+/// <reference path="../../global.d.ts" />
+
 /**
  * Interface for options with setting up a component.
  * 

@@ -9,7 +9,7 @@ import { IElementConstructor } from "../interfaces/element-constructor";
  * @param {Attribute[]} attributes
  * @returns {ClassDecorator}
  */
-export function Attributes<T extends HTMLElement>(attributes: IAttributeInfo[]): ClassDecorator {
+export function Attributes<T extends HTMLElement>(attributes: IAttributeInfo[]): Function {
     return function (element: IElementConstructor<T>) {
         Reflect.defineMetadata("component:attributes", attributes, element);
     }

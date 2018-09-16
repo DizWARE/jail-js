@@ -7,3 +7,4 @@ import "reflect-metadata";
  * @param {string} propertyKey
  */
 export declare function Attribute<T extends HTMLElement>(element: T, propertyKey: string): void;
+//# sourceMappingURL=attribute.d.ts.map

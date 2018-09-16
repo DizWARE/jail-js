@@ -50,3 +50,4 @@ export declare function NextSibling<T extends HTMLElement>(element: T, propertyK
  * @param {string} propertyKey - The property being decorated.
  */
 export declare function PreviousSibling<T extends HTMLElement>(element: T, propertyKey: string): void;
+//# sourceMappingURL=query-selector.d.ts.map

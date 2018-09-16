@@ -1,3 +1,4 @@
+/// <reference path="../../global.d.ts" />
 /**
  * Interface for options with setting up a component.
  *
@@ -34,3 +35,4 @@ export interface IComponentConfig {
      */
     options?: CustomElementOptions;
 }
+//# sourceMappingURL=component-config.d.ts.map

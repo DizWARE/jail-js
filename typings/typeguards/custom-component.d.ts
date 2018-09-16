@@ -28,3 +28,4 @@ export declare function isCustomComponentClass<T extends HTMLElement>(constructo
  * @returns - True if the instance is a type of the given custom component constructor.
  */
 export declare function implementsCustomComponentClass<T extends HTMLElement>(arg: T, constructor: IElementConstructor<T> | ICustomComponentClass<T>): boolean;
+//# sourceMappingURL=custom-component.d.ts.map

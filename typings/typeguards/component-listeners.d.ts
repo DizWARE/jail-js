@@ -39,3 +39,4 @@ export declare function implementsOnAttributeChanged(arg: HTMLElement | IOnAttri
  * @returns {arg is IOnAttachChildren}
  */
 export declare function implementsAttachChildren(arg: HTMLElement | IAttachChildren): arg is IAttachChildren;
+//# sourceMappingURL=component-listeners.d.ts.map

@@ -7,4 +7,5 @@ import { IAttributeInfo } from "../interfaces";
  * @param {Attribute[]} attributes
  * @returns {ClassDecorator}
  */
-export declare function Attributes<T extends HTMLElement>(attributes: IAttributeInfo[]): ClassDecorator;
+export declare function Attributes<T extends HTMLElement>(attributes: IAttributeInfo[]): Function;
+//# sourceMappingURL=attributes.d.ts.map

@@ -3,7 +3,7 @@ import * as ts from "gulp-typescript";
 import * as sourcemaps from "gulp-sourcemaps";
 import * as del from "del";
 import * as webpack from "gulp-webpack";
-import { exec } from "child_process";
+import uglify from "gulp-uglify-es";
 
 /**
  * Bundle library into a single file for consumption.
@@ -12,11 +12,10 @@ gulp.task("bundle", ["build"], function () {
     return gulp.src("src/index.js")
         .pipe(webpack({
             output: {
-                libraryTarget: "umd",
                 filename: `index.js`,
             },
-            target: 'node'
         }))
+        .pipe(uglify())
         .pipe(gulp.dest("./dist"))
 });
 
