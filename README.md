@@ -186,6 +186,7 @@ p {
 ```Typescript
 import { Component, Attributes, Attribute, AttributeChangedListener } from "jail-js/decorators";
 
+<!-- /**__dirname isn't available for projects that aren't node based. See web example for how to deal with getting file locations.**/ -->
 @Component({
     tagName: "basic-element",
     templateUrl: `${__dirname}/basic-element.html`,
@@ -238,7 +239,7 @@ A more detailed guide can be found [here](./tutorial/index.md)
 To start building your own application using the library start by NPM installing:
 
 ```CMD
-npm install --save git+https://github.com/DizWARE/jail-js.git
+npm install --save jail-js
 ```
 
 No other steps need to be made to start using the library.
