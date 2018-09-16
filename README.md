@@ -186,7 +186,7 @@ p {
 ```Typescript
 import { Component, Attributes, Attribute, AttributeChangedListener } from "jail-js/decorators";
 
-<!-- /**__dirname isn't available for projects that aren't node based. See web example for how to deal with getting file locations.**/ -->
+/**__dirname isn't available for projects that aren't node based. See web example for how to deal with getting file locations.**/
 @Component({
     tagName: "basic-element",
     templateUrl: `${__dirname}/basic-element.html`,

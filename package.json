@@ -1,6 +1,6 @@
 {
   "name": "jail-js",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "description": "A very basic library for easing the work required to use HTML imports, template tag, and custom components.",
   "main": "dist/index.js",
   "types": "typings/index.d.ts",
