@@ -1,5 +1,9 @@
 # JAIL.js - Just-Another-Interesting-Library
 
+[![Build Status](https://travis-ci.org/DizWARE/jail-js.svg?branch=master)](https://travis-ci.org/DizWARE/jail-js)
+[![npm version](https://badge.fury.io/js/jail-js.svg)](https://badge.fury.io/js/jail-js)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 ## Table of Contents
 
 1. [Intro to Library](#intro-to-library)
