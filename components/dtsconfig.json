@@ -4,6 +4,7 @@
         "target": "es2015",
         "module": "commonjs",
         "moduleResolution": "node",
+        "declarationDir": "typings",
         "declaration": true,
         "stripInternal": true,
         "experimentalDecorators": true

@@ -10,7 +10,7 @@
   "author": "DizWARE",
   "license": "MIT",
   "dependencies": {
-    "jail-js": "../.."
+    "jail-js": "0.3.3"
   },
   "devDependencies": {
     "@types/node": "8.x.x",

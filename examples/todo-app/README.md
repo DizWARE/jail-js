@@ -17,7 +17,7 @@ Run the following command:
 npm run start
 ```
 
-Electron should launch. 
+The server should be live and hosted at localhost:8080 
 
 ## How to Use the App
 

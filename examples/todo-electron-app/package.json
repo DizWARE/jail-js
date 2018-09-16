@@ -4,13 +4,13 @@
   "description": "A stripped down boilerplate for a typescript electron application.",
   "main": "app/main.js",
   "dependencies": {
-    "electron-is": "2.4.x",
-    "jail-js": "../.."
+    "electron-is": "3.0.x",
+    "jail-js": "0.3.3"
   },
   "devDependencies": {
     "electron": "2.0.x",
     "gulp": "3.9.x",
-    "gulp-sass": "3.1.x",
+    "gulp-sass": "4.0.1",
     "gulp-sourcemaps": "2.6.x",    
     "gulp-typescript": "5.0.0-alpha.3",
     "node-sass": "4.9.x",    

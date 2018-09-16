@@ -5,16 +5,15 @@
     "main": "dist/index.js",
     "types": "src/index.d.ts",
     "dependencies": {
-        "jail-js": ".."
+        "jail-js": "0.3.x"
     },
     "devDependencies": {
-        "@types/node": "^7.0.0",
-        "del": "^2.2.2",
-        "gulp": "^3.9.1",
-        "gulp-sourcemaps": "^2.4.0",
-        "gulp-typescript": "^3.1.4",
-        "gulp-webpack": "^1.5.0",
-        "typescript": "^2.1.5"
+        "del": "3.0.x",
+        "gulp": "3.9.x",
+        "gulp-sourcemaps": "2.6.x",
+        "gulp-typescript": "5.0.0-alpha.3",
+        "gulp-webpack": "1.5.x",
+        "typescript": "3.0.x"
     },
     "scripts": {
         "build:gulpfile": "tsc gulpfile",
