@@ -67,8 +67,7 @@ const config = {
                 <todo-control-panel></todo-control-panel>
                 <todo-list></todo-list>
             </div>
-            `,
-            links: ["main.css"]
+            `
         }),
     ],
     resolve: {
