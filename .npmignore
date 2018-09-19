@@ -1,9 +1,8 @@
 .vscode/
 examples/
-tutorial/
 src/
-*tsconfig.json
-gulpfile.*
+tsconfig.json
+webpack.config.ts
 .npmignore
 .gitignore
 components/
