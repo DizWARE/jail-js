@@ -1,9 +1,9 @@
 import { Component, Attributes, Attribute, AttributeChangedListener, QuerySelector } from "jail-js/decorators";
 import { IAttachChildren } from "jail-js/interfaces";
+import { QuerySelectorLocation } from "jail-js/enumerations";
 
 import * as html from "./flex-box.html";
 import * as style from "./flex-box.scss";
-import { QuerySelectorLocation } from "jail-js/typings/enumerations";
 
 @Component<FlexBox>({
     tagName: "flex-box",

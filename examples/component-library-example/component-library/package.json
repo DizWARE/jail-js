@@ -2,7 +2,7 @@
   "name": "component-library",
   "version": "1.0.0",
   "description": "Example component library that is framework agnostic",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "build": "webpack"
   },
