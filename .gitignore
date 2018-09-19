@@ -42,5 +42,6 @@ jspm_packages
 **/*.css
 
 dist/
+typings/
 gulpfile.d.ts
 webpack.config.d.ts
