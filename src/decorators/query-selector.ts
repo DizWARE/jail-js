@@ -48,8 +48,8 @@ export function QuerySelectorAll<T extends HTMLElement>(selector: string, locati
             }
 
             let elements: Element[] = [
-                ...((location & Location.attachedOnly && this.shadowRoot!.querySelectorAll(selector)) || []),
-                ...((location & Location.detachedOnly && this.querySelectorAll(selector)) || [])
+                ...((location & Location.attachedOnly && Array.from(this.shadowRoot!.querySelectorAll(selector))) || []),
+                ...((location & Location.detachedOnly && Array.from(this.querySelectorAll(selector))) || [])
             ];
 
             return elements

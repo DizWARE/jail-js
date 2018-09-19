@@ -12,7 +12,7 @@ import * as style from "./todo-control-panel.scss";
  * @extends {HTMLElement}
  * @implements {ComponentListeners.IOnConnected}
  */
-@Component({
+@Component<TodoControlPanel>({
     tagName: "todo-control-panel",
     templateUrl: html,
     styleUrl: style

@@ -1,5 +1,10 @@
 {
     "compilerOptions": {
+        "declaration": true,
+        "declarationDir": "./typings",
+        "lib": [
+            "dom", "es2015", "es2017", "es2018"
+        ],
         "module": "commonjs",
         "moduleResolution": "node",
         "noImplicitAny": false,
@@ -22,9 +27,5 @@
     },
     "include": [
         "src/**/*.ts"
-    ],
-    "exclude": [
-        "node_modules",
-        "gulpfile.ts"
     ]
 }

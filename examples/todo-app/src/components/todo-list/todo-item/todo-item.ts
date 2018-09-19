@@ -14,7 +14,7 @@ import * as style from "./todo-item.scss";
  * @extends {HTMLElement}
  * @implements {ComponentListeners.IOnConnected}
  */
-@Component({
+@Component<TodoItem>({
     tagName: "todo-item",
     templateUrl: html,
     styleUrl: style

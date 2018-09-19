@@ -1,7 +1,6 @@
 import { ICustomComponent, ICustomComponentClass } from "../interfaces/custom-component";
 import { IElementConstructor } from "../interfaces/element-constructor";
 
-
 /**
  * Validates that the given element was decorated with the Component decorator.
  * 
