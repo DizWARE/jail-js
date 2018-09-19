@@ -1,0 +1,26 @@
+{
+  "name": "component-library",
+  "version": "1.0.0",
+  "description": "Example component library that is framework agnostic",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack"
+  },
+  "author": "DizWARE",
+  "license": "MIT",
+  "dependencies": {
+    "jail-js": "0.3.x"
+  },
+  "devDependencies": {
+    "@types/node": "8.x.x",
+    "@types/webpack": "4.4.x",
+    "file-loader": "2.0.x",
+    "node-sass": "4.9.x",
+    "sass-loader": "7.1.x",
+    "ts-loader": "5.1.x",
+    "ts-node": "7.0.x",
+    "typescript": "3.0.x",
+    "webpack": "4.19.x",
+    "webpack-cli": "3.1.x"
+  }
+}
