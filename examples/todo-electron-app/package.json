@@ -5,7 +5,7 @@
   "main": "app/main.js",
   "dependencies": {
     "electron-is": "2.4.x",
-    "jail-js": "../.."
+    "jail-js": "0.3.3"
   },
   "devDependencies": {
     "electron": "2.0.x",

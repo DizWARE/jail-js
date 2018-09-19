@@ -12,7 +12,7 @@ import * as html from "./todo-list.html";
  * @extends {HTMLElement}
  * @implements {ComponentListeners.IOnConnected}
  */
-@Component({
+@Component<TodoList>({
     tagName: "todo-list",
     templateUrl: html
 })

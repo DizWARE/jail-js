@@ -3,6 +3,7 @@
 import { convertToCamelCase } from "./helpers";
 import { IAttributeInfo, IComponentConfig } from "./interfaces";
 import { ICustomComponent, ICustomComponentClass } from "./interfaces/custom-component";
+import { IElementConstructor } from "./interfaces/element-constructor";
 import { extendsCustomComponent } from "./typeguards/custom-component";
 import { implementsOnAdopted, implementsOnAttributeChanged, implementsOnConnected, implementsOnDisconnected, implementsAttachChildren } from "./typeguards/component-listeners";
 
@@ -17,7 +18,6 @@ const webComponentsReady = new Promise<void>((resolve, reject) => {
         resolve();
     });
 });
-type ComponentConstructor = new (...args: any[]) => HTMLElement;
 
 
 /**
@@ -29,7 +29,7 @@ type ComponentConstructor = new (...args: any[]) => HTMLElement;
  * @returns {ICustomComponentClass<T>}
  * @internal
  */
-export function CustomComponentMixin<T extends HTMLElement>(element: ComponentConstructor): ICustomComponentClass<T> {
+export function CustomComponentMixin<T extends HTMLElement, U extends IElementConstructor<HTMLElement>>(element: U): ICustomComponentClass<T> {
     return class CustomComponent extends element implements ICustomComponent {
 
         /**

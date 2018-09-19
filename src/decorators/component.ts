@@ -18,7 +18,7 @@ export function Component<T extends HTMLElement>(config: IComponentConfig): (ele
     return (element: IElementConstructor<T>): ICustomComponentClass<T> => {
         Reflect.defineMetadata("component:config", config, element);
 
-        let newCtor = CustomComponentMixin(element);
+        let newCtor = CustomComponentMixin<T, IElementConstructor<T>>(element);
 
         // Creates a link HTML element with the template import.
         let link = Object.assign(document.createElement("link"), {

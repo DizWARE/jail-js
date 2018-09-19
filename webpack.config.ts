@@ -4,25 +4,22 @@ import { Configuration } from "webpack";
 const config = {
     mode: "production",
     entry: "./src/index.ts",
-    target: "node",
+    target: "web",
     module: {
         rules: [
             {
                 test: /\.tsx?$/,
-                use: {
-                    loader: "ts-loader",
-                    options: {
-                        configFile: "tsconfig.json",
-                    }
-                },
+                use: "ts-loader",
                 exclude: /node_modules/
             },         
         ]
     },    
     resolve: {
-        extensions: [ ".tsx", ".ts", ".js" ],
+        extensions: [ ".tsx", ".ts", ".js" ]
     },
     output: {
+        library: "jail-js",
+        libraryTarget: "commonjs2",
         filename: "index.js",
         path: path.resolve(__dirname, "dist")
     }
