@@ -26,18 +26,10 @@ export class FlexBox extends HTMLElement implements IAttachChildren {
     @QuerySelector("slot", QuerySelectorLocation.attachedOnly)
     private internalSlot: HTMLSlotElement;
 
-    attachChildren(): void {
-        const children = this.children;
-        const externalSlot = Object.assign(
-            document.createElement("div"),
-            { id: "children-slot", slot: "children" } as HTMLDivElement
-        )
-        
-        for(var child of children) {
-            externalSlot.appendChild(child);
+    attachChildren(): void {        
+        for(var child of this.children) {
+            child.slot = "children";
         }
-
-        this.appendChild(externalSlot);
     }
     detachChildren(): void {
         throw new Error("Method not implemented.");

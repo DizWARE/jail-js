@@ -14,11 +14,15 @@ const config = {
             {
                 test: /.html$/,
                 use: [
-                    {
-                        loader: "file-loader",
-                        options: {
-                            outputPath: "templates",
-                            name: "[name].[hash].[ext]"
+                    "url-loader",
+                    { 
+                        loader:"html-loader", 
+                        options: {                        
+                            minimize: true,
+                            removeAttributeQuotes: true,
+                            caseSensitive: true,
+                            customAttrSurround: [ [/#/, /(?:)/], [/\*/, /(?:)/], [/\[?\(?/, /(?:)/] ],
+                            customAttrAssign: [ /\)?\]?=/ ]
                         }
                     }
                 ]
@@ -26,12 +30,9 @@ const config = {
             {
                 test: /.s[ca]ss$/,
                 use: [
-                    {
-                        loader: "file-loader",
-                        options: {
-                            outputPath: "styles",
-                            name: "[name].[hash].css"
-                        }
+                    { 
+                        loader: "url-loader", 
+                        options: { mimetype: 'text/css' }
                     },
                     "sass-loader"
                 ]
