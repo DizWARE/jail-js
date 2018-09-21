@@ -3,7 +3,7 @@ import { IComponentConfig } from "../interfaces";
 import { IElementConstructor } from "../interfaces/element-constructor";
 import { ICustomComponentClass } from "../interfaces/custom-component";
 import { CustomComponentMixin } from "../custom-component";
-import { convertToCamelCase } from "../helpers";
+import { convertToCamelCase, addTemplateTag, convertToDataUrl, addStyleTag, minimizeHtml, isDataUrl, getFacadeUrl } from "../helpers";
 
 let loadedComponentCount = 0;
 
@@ -20,9 +20,16 @@ export function Component<T extends HTMLElement>(config: IComponentConfig): (ele
 
         let newCtor = CustomComponentMixin<T, IElementConstructor<T>>(element);
 
+        const template = config.template && config.template.length && convertToDataUrl(
+            minimizeHtml(
+                addTemplateTag(config.template)
+            ), "text/html"
+        );        
+
         // Creates a link HTML element with the template import.
         let link = Object.assign(document.createElement("link"), {
-            id: `${convertToCamelCase(config.tagName)}Template`, rel: "import", href: config.templateUrl,
+            id: `${convertToCamelCase(config.tagName)}Template`, rel: "import", 
+            href: config.templateUrl ? config.templateUrl : template,
 
             /**
              * Runs when the import is fully imported. Hooks up the stylesheet into the template and 
@@ -36,12 +43,25 @@ export function Component<T extends HTMLElement>(config: IComponentConfig): (ele
                     throw new Error(`The HTML Tag ${config.tagName} had a problem importing the HTML template from ${config.templateUrl}`);
                 }
 
-                let template = this.import.querySelector("template") as HTMLTemplateElement;
-                let styleUrls = typeof config.styleUrl === "string" ? [config.styleUrl] : config.styleUrl || [];
+                const template = this.import.querySelector("template") as HTMLTemplateElement;
+                const styleUrls = typeof config.styleUrl === "string" ? [config.styleUrl] : config.styleUrl || [];
+
+                if (isDataUrl(this.href)) {
+                    this.href = getFacadeUrl(config.tagName, "html");
+                }
+
+                if (config.style && config.style.length) {
+                    template.innerHTML = addStyleTag(config.style) + template.innerHTML;
+                }
 
                 for (let styleUrl of styleUrls) {
                     let style = Object.assign(document.createElement("link"), {
-                        rel: "stylesheet", href: styleUrl
+                        rel: "stylesheet", href: styleUrl,
+                        onload(this: HTMLLinkElement) {
+                            if (isDataUrl(this.href)) {
+                                this.href = getFacadeUrl(config.tagName, "css");
+                            }
+                        }
                     });
                     template.content.insertBefore(style, template.content.firstChild);
                 }

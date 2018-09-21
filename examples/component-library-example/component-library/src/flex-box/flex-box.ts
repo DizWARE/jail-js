@@ -2,13 +2,16 @@ import { Component, Attributes, Attribute, AttributeChangedListener, QuerySelect
 import { IAttachChildren } from "jail-js/interfaces";
 import { QuerySelectorLocation } from "jail-js/enumerations";
 
-import * as html from "./flex-box.html";
-import * as style from "./flex-box.scss";
-
 @Component<FlexBox>({
     tagName: "flex-box",
-    templateUrl: html,
-    styleUrl: style
+    template: `<slot name="children"></slot>`,
+    style: `
+    slot {
+        display: flex;
+        width: 100%;
+        height: 100%;
+    }
+    `
 })
 @Attributes([
     { name: "justify-content" },
