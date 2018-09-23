@@ -5,13 +5,14 @@
   "main": "dist/index.js",
   "scripts": {
     "build": "webpack",
-    "use-local": "npm uninstall --save jail-js && npm install --save ../../..",
-    "use-published": "npm uninstall --save jail-js && npm install --save jail-js"
+    "prebuild": "npm run get-latest",
+    "preget-latest": "cd ../../.. && npm run build",
+    "get-latest": "npm uninstall jail-js && npm install"    
   },
   "author": "DizWARE",
   "license": "MIT",
   "dependencies": {
-    "jail-js": "file:///Y:\\JavaScript\\Typescript\\jail-js"
+    "jail-js": "../../.."
   },
   "devDependencies": {
     "@types/node": "8.x.x",

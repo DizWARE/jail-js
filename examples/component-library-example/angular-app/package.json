@@ -8,6 +8,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
+    "preget-latest": "cd ../component-library && npm run build",
     "get-latest": "npm uninstall component-library && npm install"
   },
   "private": true,

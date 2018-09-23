@@ -9,7 +9,7 @@
   },
   "devDependencies": {
     "@types/node": "8.x.x",
-    "@types/webpack": "^4.4.11",
+    "@types/webpack": "4.4.x",
     "del": "3.0.x",
     "ts-loader": "5.1.x",
     "ts-node": "7.0.x",
