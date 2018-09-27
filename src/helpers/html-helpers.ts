@@ -5,10 +5,10 @@
  * @param {string} htmlContent
  * @returns
  */
-export function addTemplateTag(htmlContent: string) {
-    return /^<template>.*<\/template>$/s.test(htmlContent) ? 
-        htmlContent :
-        `<template>${htmlContent}</template>`;
+export function addTemplateTag(htmlContent: string, tagName: string) {
+    return /^<template(.*)>.*<\/template>$/s.test(htmlContent) ? 
+        htmlContent.replace(/^<template(.*)>/, `<template id=${tagName}$1>`) :
+        `<template id=${tagName}>${htmlContent}</template>`;
 }
 
 /**

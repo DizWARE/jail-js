@@ -29,6 +29,6 @@ export function convertToDataUrl(content: string, type: "text/html" | "text/css"
  * @param {("html" | "css")} type
  * @returns
  */
-export function getFacadeUrl(name: string, type: "html" | "css") {
-    return `${type}://${name}`;
+export function getFacadeUrl(name: string, type: "template" | "css") {
+    return `jail-js://${type}/${name}`;
 }

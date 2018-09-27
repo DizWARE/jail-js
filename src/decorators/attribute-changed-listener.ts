@@ -1,16 +1,6 @@
 import "reflect-metadata";
 import { convertToKebabCase } from "../helpers";
 
-
-/**
- * Defines the method being decorated as a listener for changes to the given attribute.
- * 
- * @export
- * @template T - Class being decorated. This should enforce that the type is at least an HTMLElement.
- * @param {string} attributeName - The name of the attribute to watch for changes. When a change happens, this method is called.
- */
-export function AttributeChangedListener<T extends HTMLElement>(attributeName: string): MethodDecorator
-
 /**
  * Defines the method being decorated as a listener for changes to the given list of attributes.
  * 
@@ -18,10 +8,9 @@ export function AttributeChangedListener<T extends HTMLElement>(attributeName: s
  * @template T - Class being decorated. This should enforce that the type is at least an HTMLElement.
  * @param {string[]} attributeNames - The name of the attributes to watch for changes. When a change happens, this method is called.
  */
-export function AttributeChangedListener<T extends HTMLElement>(...attributeNames: string[]): MethodDecorator
-export function AttributeChangedListener<T extends HTMLElement>(attributeNames: string | string[]): MethodDecorator {
+export function AttributeChangedListener<T extends HTMLElement>(...attributeNames: string[]): MethodDecorator {
     return function (element: T, methodName: string, descriptor: PropertyDescriptor) {
-        attributeNames = typeof attributeNames === "string" ? [attributeNames] : [...new Set(attributeNames)];
+        attributeNames = [...new Set(attributeNames)];
 
         for (let attributeName of attributeNames) {
             attributeName = convertToKebabCase(attributeName);

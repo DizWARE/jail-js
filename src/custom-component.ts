@@ -219,7 +219,7 @@ export function CustomComponentMixin<T extends HTMLElement, U extends IElementCo
         public async attributeChangedCallback(attrName?: string, oldVal?: string, newVal?: string): Promise<void> {
             await webComponentsReady;
 
-            let attributeChangedListeners: { [key: string]: ((oldVal?: string, newVal?: string) => void)[] }
+            const attributeChangedListeners: { [key: string]: ((oldVal?: string, newVal?: string) => void)[] }
                 = Reflect.getMetadata("component:attribute-listeners", this.constructor) || [];
 
             if (attrName && (attributeChangedListeners[attrName] || []).length) {
@@ -284,28 +284,24 @@ export function CustomComponentMixin<T extends HTMLElement, U extends IElementCo
 
 
         /**
-         * Handles attaching the children to the Shadow DOM. The default implementation will append the children into the Shadow DOM.
+         * Handles attaching the children to the component.
          * 
          * @private
          */
         private _attachChildren() {
             if (implementsAttachChildren(this)) {
                 this.attachChildren();
-            } else {
-                Array.from(this.childNodes).forEach(value => this.shadowRoot.appendChild(value));
             }
         }
 
         /**
-         * Handles detatching the children from the component from the Shadow DOM. The default implementation will move the children out of the Shadow DOM.
+         * Handles detatching the children from the component.
          * 
          * @private
          */
         private _detatchChildren() {
             if (implementsAttachChildren(this)) {
                 this.detachChildren();
-            } else {
-                Array.from(this.shadowRoot.childNodes).forEach(value => this.appendChild(value));
             }
         }
 

@@ -2,16 +2,19 @@ import { Component, Attributes, Attribute, AttributeChangedListener, QuerySelect
 import { IAttachChildren } from "jail-js/interfaces";
 import { QuerySelectorLocation } from "jail-js/enumerations";
 
+const template = `<slot name="flex-children"></slot>`;
+const style = `
+slot {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+`;
+
 @Component<FlexBox>({
     tagName: "flex-box",
-    template: `<slot name="children"></slot>`,
-    style: `
-    slot {
-        display: flex;
-        width: 100%;
-        height: 100%;
-    }
-    `
+    template,
+    style
 })
 @Attributes([
     { name: "justify-content" },
@@ -31,11 +34,13 @@ export class FlexBox extends HTMLElement implements IAttachChildren {
 
     attachChildren(): void {        
         for(var child of this.children) {
-            child.slot = "children";
+            child.slot = "flex-children";
         }
     }
     detachChildren(): void {
-        throw new Error("Method not implemented.");
+        for(var child of this.children) {
+            child.slot = "";
+        }
     }
 
     @AttributeChangedListener("justify-content", "align-items", "flex-direction")

@@ -2,7 +2,7 @@ import * as path from "path";
 import { Configuration } from "webpack";
 
 const config = {
-    mode: "production",
+    mode: "development",
     entry: "./src/index.ts",
     module: {
         rules: [
@@ -14,13 +14,13 @@ const config = {
             {
                 test: /.html$/,
                 use: [
-                    "url-loader",
                     { 
                         loader:"html-loader", 
                         options: {                        
                             minimize: true,
                             removeAttributeQuotes: true,
                             caseSensitive: true,
+                            exportAsDefault: true,
                             customAttrSurround: [ [/#/, /(?:)/], [/\*/, /(?:)/], [/\[?\(?/, /(?:)/] ],
                             customAttrAssign: [ /\)?\]?=/ ]
                         }

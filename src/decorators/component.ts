@@ -22,7 +22,7 @@ export function Component<T extends HTMLElement>(config: IComponentConfig): (ele
 
         const template = config.template && config.template.length && convertToDataUrl(
             minimizeHtml(
-                addTemplateTag(config.template)
+                addTemplateTag(config.template, config.tagName)
             ), "text/html"
         );        
 
@@ -47,7 +47,7 @@ export function Component<T extends HTMLElement>(config: IComponentConfig): (ele
                 const styleUrls = typeof config.styleUrl === "string" ? [config.styleUrl] : config.styleUrl || [];
 
                 if (isDataUrl(this.href)) {
-                    this.href = getFacadeUrl(config.tagName, "html");
+                    this.href = getFacadeUrl(config.tagName, "template");
                 }
 
                 if (config.style && config.style.length) {

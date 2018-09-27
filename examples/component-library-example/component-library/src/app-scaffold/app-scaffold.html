@@ -1,0 +1,11 @@
+<grid-layout 
+    grid-template-rows="50px 1fr 1fr 100px" 
+    grid-template-columns="75px 1fr 1fr" 
+    grid-template-areas='"nav nav nav""side body body""side body body""footer footer footer"'
+    style="width: 100vw; height: 100vh;"
+>
+    <slot name="nav" style="grid-area: nav;"></slot>
+    <slot name="side" style="grid-area: side;"></slot>
+    <slot name="body" style="grid-area: body;"></slot>
+    <slot name="footer" style="grid-area: footer;"></slot>
+</grid-layout>
