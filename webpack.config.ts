@@ -2,7 +2,7 @@ import * as path from "path";
 import { Configuration } from "webpack";
 
 const config = {
-    mode: "production",
+    mode: "development",
     entry: "./src/index.ts",
     target: "web",
     module: {

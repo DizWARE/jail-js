@@ -29,13 +29,7 @@ const config = {
             },
             {
                 test: /.s[ca]ss$/,
-                use: [
-                    { 
-                        loader: "url-loader", 
-                        options: { mimetype: 'text/css' }
-                    },
-                    "sass-loader"
-                ]
+                use: "sass-loader"
             }
         ]
     },
