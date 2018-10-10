@@ -1,11 +1,18 @@
 <grid-layout 
-    grid-template-rows="50px 1fr 1fr 100px" 
-    grid-template-columns="75px 1fr 1fr" 
-    grid-template-areas='"nav nav nav""side body body""side body body""footer footer footer"'
+    grid-template-rows="64px 1fr 100px" 
+    grid-template-columns="minmax(0, 300px) 1fr 1fr"
     style="width: 100vw; height: 100vh;"
 >
-    <slot name="nav" style="grid-area: nav;"></slot>
-    <slot name="side" style="grid-area: side;"></slot>
-    <slot name="body" style="grid-area: body;"></slot>
-    <slot name="footer" style="grid-area: footer;"></slot>
+    <div style="grid-row: 1; grid-column: span 3;">
+        <slot name="nav"></slot>
+    </div>
+    <div style="grid-row: 2; grid-column: 1;">
+        <slot name="side"></slot>
+    </div>
+    <div style="grid-row: 2; grid-column: span 2;">
+        <slot name="body"></slot>
+    </div>
+    <div style="grid-row: 3; grid-column: span 3;">
+        <slot name="footer"></slot>
+    </div>
 </grid-layout>
