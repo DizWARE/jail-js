@@ -2,14 +2,17 @@
   <v-app>
     <app-scaffold>
       <v-toolbar app slot="nav">
-        <v-toolbar-title class="headline text-uppercase">
-          <span>Example</span>
-          <span class="font-weight-light">Application</span>
-        </v-toolbar-title>
-        <v-spacer></v-spacer>
-        <v-btn><span class="mr-2">Do Something</span></v-btn>
-        <v-btn><span class="mr-2">Be Something</span></v-btn>
-        <v-btn><span class="mr-2">Love Something</span></v-btn>
+        <flex-box class="toolbar-container" flex-direction="row">
+          <v-toolbar-title class="headline text-uppercase">
+            <span>Example</span>
+            <span class="font-weight-light">Application</span>
+          </v-toolbar-title>
+          <flex-box class="nav-buttons" flex-direction="row" justify-content="space-evenly">
+            <v-btn><span class="mr-2">Do Something</span></v-btn>
+            <v-btn><span class="mr-2">Be Something</span></v-btn>
+            <v-btn><span class="mr-2">Love Something</span></v-btn>
+          </flex-box>
+        </flex-box>
       </v-toolbar>
       <div slot="side" style="background-color: green;"></div>
       <v-content slot="body">
@@ -46,5 +49,14 @@ export default {
 <style lang="scss">
 .v-toolbar--fixed {
   position: relative;
+}
+.toolbar-container {
+  width: 100%;
+}
+.headline {
+  flex: 2;
+}
+.nav-buttons {
+  flex: 1
 }
 </style>
