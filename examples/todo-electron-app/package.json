@@ -8,7 +8,7 @@
     "jail-js": "0.3.x"
   },
   "devDependencies": {
-    "electron": "2.0.x",
+    "electron": "9.1.x",
     "gulp": "3.9.x",
     "gulp-sass": "4.0.1",
     "gulp-sourcemaps": "2.6.x",    
