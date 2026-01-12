@@ -25,6 +25,6 @@
     "typescript": "3.0.x",
     "webpack": "4.19.x",
     "webpack-cli": "3.1.x",
-    "webpack-dev-server": "3.1.x"
+    "webpack-dev-server": "5.2.x"
   }
 }
